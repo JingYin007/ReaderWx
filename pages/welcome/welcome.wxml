@@ -1,0 +1,12 @@
+<!--pages/welcome/welcome.wxml-->
+<!-- WXML 是编写小程序的骨架 -->
+<view>
+<image src='/images/avatar.png'></image>
+  <text>
+ Hello
+  </text>
+
+  <view>
+  <text></text>
+  </view>
+</view>
