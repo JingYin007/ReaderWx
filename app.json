@@ -5,7 +5,7 @@
     "pages/movies/movies"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#74CDF7"
+    "navigationBarBackgroundColor": "#b3d4db"
   },
   "tabBar": {
     "borderStyle": "white",

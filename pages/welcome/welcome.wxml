@@ -1,10 +1,11 @@
 <!--pages/welcome/welcome.wxml-->
 <!-- WXML 是编写小程序的骨架 -->
-<view>
-<image src='/images/avatar.png'></image>
-  <text>Hello，moTzxx</text>
+<view class='container'>
+  <image class='user-avatar' src='/images/avatar.png'></image>
+  <text class="user-name">
+  <text style='color:red'>Hello，</text>moTzxx</text>
 
-  <view>
-  <text></text>
+  <view class='moto-container'>
+    <text class='moto'>开启小程序之旅</text>
   </view>
 </view>
