@@ -1,1 +1,8 @@
 /* pages/welcome/welcome.wxss */
+image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  -webkit-border-radis:50%;
+  -moz-border-radis:50%;
+}

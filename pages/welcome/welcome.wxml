@@ -2,9 +2,7 @@
 <!-- WXML 是编写小程序的骨架 -->
 <view>
 <image src='/images/avatar.png'></image>
-  <text>
- Hello
-  </text>
+  <text>Hello，moTzxx</text>
 
   <view>
   <text></text>
