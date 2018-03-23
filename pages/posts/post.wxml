@@ -1,27 +1,30 @@
 <!--pages/posts/post.wxml-->
 <view>
   <swiper class='swiper-top ' indicator-dots='true' autoplay='true' duration='800' interval='2000'>
-    <swiper-item>
-      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/img/20180227/1fcb49c7ebef9570d96e8233f4699ebe.jpg?&ssig=YH3iGVvLOE&KID=sina,slidenews&Expires=1521776351'></image>
+  <swiper-item>
+      <image src='http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg'></image>
     </swiper-item>
     <swiper-item>
-      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/img/20171115/f2553d86231272fffb6f2bc59db941b9.jpg?&ssig=tLvF%2FmNMX%2B&KID=sina,slidenews&Expires=1521775060'></image>
+      <image src='http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/rh9U-fyskeue1020373.jpg'></image>
     </swiper-item>
     <swiper-item>
-      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/1000_0/20180320/80d46b2526de9a1097d2746454fe3722_1333_750.jpg?&ssig=1UVi7wX%2Bv9&KID=sina,slidenews&Expires=1521780349'></image>
+      <image src='http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/1000_0/20180121/93589bd7d6c9c1fdded55f909938bdb9_1500_909.jpg?&ssig=05PmnF%2BGtR&KID=sina,slidenews&Expires=1521794495'></image>
     </swiper-item>
   </swiper>
 
 
   <view class='news-list'>
     <view class='news-item'>
-      <view class='post-autor-data'>
+      <view class='post-author-data'>
         <image class='avatar' src='/images/avatar/1.png'></image>
         <text class='date'>Jan 24 2018</text>
       </view>
-      <text class='title'>这是一个神奇的世界！</text>
-      <image class='view-img' src='/images/vr.png'></image>
-      <text class='content'>这是一个神奇的世界！这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界</text>
+      <text class='title'>仰天岗上的山菊花</text>
+      <image class='view-img' src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/150/w1000h750/20180321/G1jj-fyskeue1110060.jpg'></image>
+      <text class='content'>新浪爱拍美图类周选第33期（2018.3.12-3.18）集中展示爱拍平台近一周美图类的投稿精品。来爱拍，用照片证明实力！http://aipai.sina.com.cn 《仰天岗上的山菊花》摄影：@新余章志宏 摄于江西省新余市仰天岗国家森林公园 来自2018第八届“金鹤奖”全国数码摄影大赛</text>
       <view class='post-like'>
         <image class='icon' src='../../images/icon/chat.png'></image>
         <text class='num'>112</text>
@@ -31,18 +34,18 @@
 
     </view>
 <view class='news-item'>
-      <view class='post-autor-data'>
-        <image class='avatar' src='/images/avatar/1.png'></image>
-        <text class='date'>Jan 24 2018</text>
+      <view class='post-author-data'>
+        <image class='avatar' src='/images/avatar/2.png'></image>
+        <text class='date'>Apr 01 2018</text>
       </view>
-      <text class='title'>这是一个神奇的世界！</text>
-      <image class='view-img' src='/images/vr.png'></image>
-      <text class='content'>这是一个神奇的世界！这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界</text>
+      <text class='title'>朝圣：燃情冰雪</text>
+      <image class='view-img' src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/66/w1000h666/20180321/yUGj-fyskeue1782009.jpg'></image>
+      <text class='content'>新浪爱拍记录类周选第33期（2018.3.12-3.18）集中展示爱拍平台近一周记录类的投稿精品。《雪中听经》摄影：@镜察天涯 来自2018“最佳视o界”：燃情冰雪</text>
       <view class='post-like'>
         <image class='icon' src='../../images/icon/chat.png'></image>
-        <text class='num'>112</text>
+        <text class='num'>325</text>
         <image class='icon' src='../../images/icon/view.png'></image>
-        <text class='num'>69</text>
+        <text class='num'>109</text>
       </view>
 
     </view>
