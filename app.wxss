@@ -1,0 +1,4 @@
+/*全局样式设置*/
+text{
+  font-family: monospace
+}

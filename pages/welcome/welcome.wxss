@@ -1,8 +1,10 @@
 /* pages/welcome/welcome.wxss */
-page{
+
+page {
   height: 100%;
-  background-color:#b3d4db;
+  background-color: #647b9a;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -21,7 +23,6 @@ page{
 
 .user-name {
   font-size: 32rpx;
-  font-family: 'Lucida Sans Unicode';
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -33,6 +34,9 @@ page{
   border-radius: 5px;
   text-align: center;
   padding: 0 3px;
+}
+
+.moto {
   line-height: 40px;
   font-size: 22rpx;
   font-weight: bold;

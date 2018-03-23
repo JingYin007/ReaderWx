@@ -1,1 +1,8 @@
-{}
+{
+  "window": {
+    "navigationBarBackgroundColor": "#f2222e",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#eeeeee"
+  }
+}

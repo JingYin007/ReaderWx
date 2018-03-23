@@ -1,2 +1,52 @@
 <!--pages/posts/post.wxml-->
-<text>pages/posts/post.wxml</text>
+<view>
+  <swiper class='swiper-top ' indicator-dots='true' autoplay='true' duration='800' interval='2000'>
+    <swiper-item>
+      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/img/20180227/1fcb49c7ebef9570d96e8233f4699ebe.jpg?&ssig=YH3iGVvLOE&KID=sina,slidenews&Expires=1521776351'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/img/20171115/f2553d86231272fffb6f2bc59db941b9.jpg?&ssig=tLvF%2FmNMX%2B&KID=sina,slidenews&Expires=1521775060'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='http://sinastorage.com/storage.zone.photo.sina.com.cn/zone/1000_0/20180320/80d46b2526de9a1097d2746454fe3722_1333_750.jpg?&ssig=1UVi7wX%2Bv9&KID=sina,slidenews&Expires=1521780349'></image>
+    </swiper-item>
+  </swiper>
+
+
+  <view class='news-list'>
+    <view class='news-item'>
+      <view class='post-autor-data'>
+        <image class='avatar' src='/images/avatar/1.png'></image>
+        <text class='date'>Jan 24 2018</text>
+      </view>
+      <text class='title'>这是一个神奇的世界！</text>
+      <image class='view-img' src='/images/vr.png'></image>
+      <text class='content'>这是一个神奇的世界！这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界</text>
+      <view class='post-like'>
+        <image class='icon' src='../../images/icon/chat.png'></image>
+        <text class='num'>112</text>
+        <image class='icon' src='../../images/icon/view.png'></image>
+        <text class='num'>69</text>
+      </view>
+
+    </view>
+<view class='news-item'>
+      <view class='post-autor-data'>
+        <image class='avatar' src='/images/avatar/1.png'></image>
+        <text class='date'>Jan 24 2018</text>
+      </view>
+      <text class='title'>这是一个神奇的世界！</text>
+      <image class='view-img' src='/images/vr.png'></image>
+      <text class='content'>这是一个神奇的世界！这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界这是一个神奇的世界</text>
+      <view class='post-like'>
+        <image class='icon' src='../../images/icon/chat.png'></image>
+        <text class='num'>112</text>
+        <image class='icon' src='../../images/icon/view.png'></image>
+        <text class='num'>69</text>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
