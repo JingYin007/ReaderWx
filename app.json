@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/posts/post",
     "pages/welcome/welcome",
+    "pages/posts/post",
     "pages/movies/movies"
   ],
   "window": {
@@ -13,7 +13,7 @@
     "list": [
       {
         "pagePath": "pages/posts/post",
-        "text": "阅读",
+        "text": "摄影",
         "iconPath": "images/tab/yuedu.png",
         "selectedIconPath": "images/tab/yuedu_hl.png"
       },

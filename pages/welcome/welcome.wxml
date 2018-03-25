@@ -5,7 +5,7 @@
   <text class="user-name">
   <text style='color:red'>Hello，</text>moTzxx</text>
 
-  <view class='moto-container'>
+  <view class='moto-container' bindtap='toHome'>
     <text class='moto'>开启小程序之旅</text>
   </view>
 </view>

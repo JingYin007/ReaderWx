@@ -1,58 +1,18 @@
 <!--pages/posts/post.wxml-->
+<!-- 引用模板文件 相对路径、绝对路径都可以 -->
+<import src="post-item/post-item-template.wxml"/>
 <view>
-  <swiper class='swiper-top ' indicator-dots='true' autoplay='true' duration='800' interval='2000'>
-  <swiper-item>
-      <image src='http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/rh9U-fyskeue1020373.jpg'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/78/w1000h678/20180321/2r4O-fyskeue1110306.jpg'></image>
-    </swiper-item>
-     <swiper-item>
-      <image src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/67/w1000h667/20180321/X3_M-fyskeue1111130.jpg'></image>
+  <swiper class='swiper-top ' vertical='{{false}}' indicator-dots='true' autoplay='true' duration='800' interval='2000'>
+    <swiper-item wx:for='{{swiperImg}}' wx:key='swiperImg'>
+      <image src='{{item.img}}'></image>
     </swiper-item>
   </swiper>
 
-
   <view class='news-list'>
-    <view class='news-item'>
-      <view class='post-author-data'>
-        <image class='avatar' src='/images/avatar/1.png'></image>
-        <text class='date'>Jan 24 2018</text>
-      </view>
-      <text class='title'>仰天岗上的山菊花</text>
-      <image class='view-img' src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/150/w1000h750/20180321/G1jj-fyskeue1110060.jpg'></image>
-      <text class='content'>新浪爱拍美图类周选第33期（2018.3.12-3.18）集中展示爱拍平台近一周美图类的投稿精品。来爱拍，用照片证明实力！http://aipai.sina.com.cn 《仰天岗上的山菊花》摄影：@新余章志宏 摄于江西省新余市仰天岗国家森林公园 来自2018第八届“金鹤奖”全国数码摄影大赛</text>
-      <view class='post-like'>
-        <image class='icon' src='../../images/icon/chat.png'></image>
-        <text class='num'>112</text>
-        <image class='icon' src='../../images/icon/view.png'></image>
-        <text class='num'>69</text>
-      </view>
-
-    </view>
-<view class='news-item'>
-      <view class='post-author-data'>
-        <image class='avatar' src='/images/avatar/2.png'></image>
-        <text class='date'>Apr 01 2018</text>
-      </view>
-      <text class='title'>朝圣：燃情冰雪</text>
-      <image class='view-img' src='http://n.sinaimg.cn/news/1_img/upload/3ad618a7/66/w1000h666/20180321/yUGj-fyskeue1782009.jpg'></image>
-      <text class='content'>新浪爱拍记录类周选第33期（2018.3.12-3.18）集中展示爱拍平台近一周记录类的投稿精品。《雪中听经》摄影：@镜察天涯 来自2018“最佳视o界”：燃情冰雪</text>
-      <view class='post-like'>
-        <image class='icon' src='../../images/icon/chat.png'></image>
-        <text class='num'>325</text>
-        <image class='icon' src='../../images/icon/view.png'></image>
-        <text class='num'>109</text>
-      </view>
-
-    </view>
-
+    <block wx:for="{{objData}}" wx:key='obData' wx:for-item='item'>
+      <!-- //template-->
+      <template is = 'postItem' data='{{item}}' />
+    </block>
   </view>
 
 </view>
