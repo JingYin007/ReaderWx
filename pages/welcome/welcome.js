@@ -6,7 +6,7 @@ Page({
    */
   
   toHome: function () {
-    console.log('toHome');
+    //console.log('toHome');
     wx.switchTab  ({
       url: '../posts/post'
     });
