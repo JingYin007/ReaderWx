@@ -1,10 +1,10 @@
 <!--pages/posts/post-detail.wxml-->
 <!-- 先静后动，先样式再数据 -->
 <view class='container'>
-  <image class='head-img' src='/images/post/sls.png'> </image>
+  <image class='head-img' src='{{readInfo.post_img}}'> </image>
   <image class='audio' src='/images/music/music-start.png'></image>
   <view class='author-data'>
-    <image class='img-avatar' src='/images/avatar/3.png'></image>
+    <image class='img-avatar' src='{{readInfo.author_img}}'></image>
     <text class='txt-avatar'>{{readInfo.author}}</text>
     <text class='txt-publish'>发表于:</text>
     <text class='txt-date'>{{readInfo.dateTime}}</text>
@@ -17,5 +17,5 @@
     </view>
     <view class='horizon'></view>
   </view>
-  <text class='detail'>这是一个，神奇、秀丽、充满冒险气息的世界!</text>
+  <text class='detail'>{{readInfo.detail}}</text>
 </view>
