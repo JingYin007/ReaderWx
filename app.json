@@ -1,12 +1,13 @@
 {
   "pages": [
+   
     "pages/welcome/welcome",
     "pages/posts/post",
-    "pages/movies/movies",
-    "pages/posts/post-detail/post-detail"
+    "pages/posts/post-detail/post-detail",
+    "pages/movies/movies"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#647B9A"
+    "navigationBarBackgroundColor": "#333333"
   },
   "tabBar": {
     "borderStyle": "white",

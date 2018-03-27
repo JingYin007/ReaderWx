@@ -1,1 +1,75 @@
 /* pages/posts/post-detail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.head-img{
+  width: 100%;
+  height: 460rpx;
+}
+.audio{
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 180rpx;
+  opacity: 0.7;
+}
+.author-data{
+  flex-direction: row;
+  margin: 10rpx 30rpx 0 30rpx;
+}
+.author-data .img-avatar{
+  width: 66rpx;
+  height: 66rpx;
+  vertical-align: middle;
+}
+.author-data .txt-avatar{
+  font-size: 28rpx;
+  font-weight: 300;
+  vertical-align: middle;
+  color: #999;
+  margin-left: 20rpx;
+}
+.author-data .txt-publish,.author-data .txt-date{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+.title{
+  margin: 10rpx 0 5rpx  30rpx;
+  font-size: 33rpx;
+  color:   slategrey;
+  font-family:   Verdana;
+}
+.tool{
+  margin-top: 2rpx;
+}
+.tool .circle-img{
+  float: right;
+  margin-right: 40rpx;
+  vertical-align: middle;
+} 
+.tool .circle-img image{
+  width: 63rpx;
+  height: 63rpx;
+  margin-left: 20rpx;
+}
+.tool .horizon{
+  width: 100%;
+  height: 2rpx;
+  background-color:   #999;
+  vertical-align: middle;
+  position: relative;
+  top: 33rpx;
+  margin: 0 auto;
+  z-index: -99;
+}
+.detail{
+  color: #666;
+  margin: 12rpx 30rpx 0 30rpx;
+  letter-spacing: 2rpx;
+}
+
