@@ -16,9 +16,11 @@ Page({
   onLoad: function (options) {
     var postId = options.id;
     var postData = postsData_js.objData[postId];
-    this.data.currentId = postId;
+    //有的版本不支持此代码
+    //this.data.currentId = postId;
     this.setData({
       readInfo: postData,
+      currentId: postId
     });
 
     //进行文章收藏的初始化显示
