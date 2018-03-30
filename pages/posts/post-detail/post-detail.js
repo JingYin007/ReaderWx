@@ -50,6 +50,12 @@ Page({
     this.setData({
       collectTag: !collectTag
     })
+  
+      wx.showToast({
+        title:! collectTag?'收藏成功':'取消成功',
+        duration:1200,
+      })
+   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
