@@ -7,7 +7,7 @@ Page({
    */
   data: {
     collectTag: false,
-    currentId:0
+    currentId: 0
   },
 
   /**
@@ -26,11 +26,11 @@ Page({
     //进行文章收藏的初始化显示
     var collectedInfo = wx.getStorageSync('collectedInfo');
     if (collectedInfo) {
-      var collectTag = collectedInfo[postId] ? collectedInfo[postId]:false;
+      var collectTag = collectedInfo[postId] ? collectedInfo[postId] : false;
       this.setData({
         collectTag: collectTag
       })
-    }else{
+    } else {
       var postCollected = {};
       postCollected[postId] = false;
       wx.setStorageSync('collectedInfo', postCollected);
@@ -47,21 +47,27 @@ Page({
     //更新缓存值
     wx.setStorageSync('collectedInfo', collectedInfo);
     //更新数据绑定变量 ，从而实现切换图片
-    this.setData({
-      collectTag: !collectTag
+    this.showToastFun(collectTag);
+
+  },
+  //封装提示窗
+  showToastFun: function (collectTag) {
+    var that = this;
+    wx.showToast({
+      title: !collectTag ? '收藏成功' : '取消成功',
+      duration: 1200,
+      success(res) {
+        that.setData({
+          collectTag: !collectTag
+        })
+      },
     })
-  
-      wx.showToast({
-        title:! collectTag?'收藏成功':'取消成功',
-        duration:1200,
-      })
-   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
