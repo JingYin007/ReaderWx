@@ -39,7 +39,7 @@ Page({
   /**
    * 收藏按钮的事件触发
    */
-  collectTap: function (event) {
+  onCollectTap: function (event) {
     var collectTag = this.data.collectTag;
     var collectedInfo = wx.getStorageSync('collectedInfo');
     //收藏变成未收藏，未收藏变成已收藏
@@ -48,15 +48,37 @@ Page({
     wx.setStorageSync('collectedInfo', collectedInfo);
     //更新数据绑定变量 ，从而实现切换图片
     this.showToastFun(collectTag);
-
   },
+  onShareTap: function (event) {
+    var itemList =  [
+      '分享给微信好友',
+      '分享到朋友圈',
+      '分享到 QQ',
+      '分享到微博'
+    ];
+    wx.showActionSheet({
+      itemList: itemList,
+      itemColor:'#405F80',
+      success: function (res) {
+        wx.showModal({
+          title: '用户'+ itemList[res.tapIndex],
+          content: 'Tip:现在无法实现分享功能...',
+        })
+        // console.log(res.tapIndex)
+      },
+      fail: function (res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+
   //封装提示窗
   showToastFun: function (collectTag) {
     var that = this;
     wx.showToast({
       title: !collectTag ? '收藏成功' : '取消成功',
       duration: 1200,
-      success(res) {
+      complete(res) {
         that.setData({
           collectTag: !collectTag
         })

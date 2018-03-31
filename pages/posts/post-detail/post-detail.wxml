@@ -12,9 +12,9 @@
   <text class='title'>{{readInfo.title}}</text>
   <view class='tool'>
     <view class='circle-img'>
-      <image wx:if="{{collectTag}}" catchtap='collectTap' data-post-id="{{readInfo.postId}}" class='img-collection' src='/images/icon/collection.png'></image>
-      <image wx:else catchtap='collectTap' data-post-id="{{readInfo.postId}}" class='img-collection' src='/images/icon/collection-anti.png'></image>
-      <image class='img-share' src='/images/icon/share.png'></image>
+      <image wx:if="{{collectTag}}" catchtap='onCollectTap' data-post-id="{{readInfo.postId}}" class='img-collection' src='/images/icon/collection.png'></image>
+      <image wx:else catchtap='onCollectTap' data-post-id="{{readInfo.postId}}" class='img-collection' src='/images/icon/collection-anti.png'></image>
+      <image class='img-share' catchtap='onShareTap' src='/images/icon/share.png'></image>
     </view>
     <view class='horizon'>
     </view>
