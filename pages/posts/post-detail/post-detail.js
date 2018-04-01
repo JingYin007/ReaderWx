@@ -49,8 +49,9 @@ Page({
     //更新数据绑定变量 ，从而实现切换图片
     this.showToastFun(collectTag);
   },
+  //分享按钮的触发事件
   onShareTap: function (event) {
-    var itemList =  [
+    var itemList = [
       '分享给微信好友',
       '分享到朋友圈',
       '分享到 QQ',
@@ -58,10 +59,10 @@ Page({
     ];
     wx.showActionSheet({
       itemList: itemList,
-      itemColor:'#405F80',
+      itemColor: '#405F80',
       success: function (res) {
         wx.showModal({
-          title: '用户'+ itemList[res.tapIndex],
+          title: '用户' + itemList[res.tapIndex],
           content: 'Tip:现在无法实现分享功能...',
         })
         // console.log(res.tapIndex)
