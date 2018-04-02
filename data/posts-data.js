@@ -11,7 +11,13 @@ var local_objData = [
     author: '子丘_',
     dateTime: '21小时前',
     detail: '在日内瓦大大小小的众多教堂之中，位于山丘之上，老城区之中的圣彼得大教堂，无疑是最为让人难以忘怀的一座。 教堂位于山丘之巅，一座绿色的钟楼矗立于教堂顶端。 这里拥有整个城区最佳的观赏视角。\n\n 昔日伟大的老城区，为于山之巅峰，还在缅怀它的沧桑历史时，依然置身于琴声悠扬的梦境。蜿蜒的小道，将一座座年代久远的古宅串联，苍翠的树木间，酒吧林立，五彩斑斓里的街区，美得妙不可言。',
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38",
+      title: "夜夜夜夜-齐秦",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000"
+    }
   },
+
   {
     date: "Apr 01 2018",
     title: '朝圣：燃情冰雪',
@@ -24,6 +30,11 @@ var local_objData = [
     author: '茜茜de公主游记',
     dateTime: '24小时前',
     detail: '脱鞋进入行宫，带着耳麦听着皇太后行宫的详细解说，体会每一个角落、每一件装饰品细节背后的故事，从侧面了解皇太后的平生和爱好，不知不觉感到内心异常平静，仿佛穿过时光看到那张历经人生变故却依然美好恬静的面庞。\n\n 走出皇太后行宫不远处便是有着“人间仙境”之称的皇太后花园，这里繁花似锦，四季如春。那一天天气独好，我们就像两个稚气未脱的孩子，采一缕清风，与蝶花曼舞，无关乎其他人的目光，就肆意忘情的徜徉一片花的海洋，沉醉在满园艳彩甜美之中，享受光阴与静美。',
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100003GdCmG4NkEOR.m4a?fromtag=38",
+      title: "鬼迷心窍-李宗盛",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000002xOmp62kqSic.jpg?max_age=2592000"
+    }
   },
   {
     date: "Apr 11 2018",
@@ -37,6 +48,11 @@ var local_objData = [
     author: 'Mimo夏未末',
     dateTime: '21小时前',
     detail: 'moyo在中午一点半到乌鲁瓦图接我们，他说到乌布要两个多小时。\n\n一路上的风景如何我不得而知了，因为我就是那种“在任何交通工具都能熟睡的生物”。\n\n 不过车子刚到乌布就被表妹摇醒了。乌布不愧是巴厘岛绘画和艺术重镇、蜚声世界的艺术村，两旁的路上摆满了各种漂亮的艺术品。\n\n moyo说乌布有很多艺术博物馆，一路上还兴致勃勃地介绍着艺术品店和博物馆。值得一说的是每家门口的雕像，有动物、有人、有神，具象抽象都有，基本是找不到一样的。',
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100004HLusI2lLjZy.m4a?fromtag=38",
+      title: "女儿情-万晓利",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000004Wv5BO30pPc0.jpg?max_age=2592000"
+    }
   },
   {
     date: "Apr 26 2018",
@@ -50,6 +66,11 @@ var local_objData = [
     author: '新浪河北旅游',
     dateTime: '20小时前',
     detail: '​棋盘山景区以“十里杏花”闻名， 太行春色谁先知，棋盘杏花笑开口。 \n\n每年3月走进去景区，就看见远远的一片一片的杏花，就像片片粉白的云彩。\n\n朵朵杏花就像小姑娘天真的笑脸，簇拥在一起，热热闹闹的，枝头处处点缀着浓浓春意。这个景区和旁边的村子是古朴的，没有大都市的喧嚣。 \n\n 忽如一夜春风来，千树万树梨花开。”\n\n每年4月，再“中国雪花梨之乡”赵县你都能看到这样的美景。每年4月10日左右是花的盛期，梨花盛开时节，万顷梨园含烟带雨，飞雪敝日，蜜蜂飞舞。前来观花游览的各界人士车水马龙，梨园内可谓人山人海。',
+    music: {
+      url: "http://ws.stream.qqmusic.qq.com/C100000Zn0vS4fKKo8.m4a?fromtag=38",
+      title: "沉默是金-张国荣",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000003at0mJ2YrR2H.jpg?max_age=2592000"
+    }
   }
 
 ];

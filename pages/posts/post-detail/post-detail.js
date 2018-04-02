@@ -7,6 +7,7 @@ Page({
    */
   data: {
     collectTag: false,
+    isPlayingMusic: false,
     currentId: 0
   },
 
@@ -35,6 +36,39 @@ Page({
       postCollected[postId] = false;
       wx.setStorageSync('collectedInfo', postCollected);
     }
+  },
+  /**
+   * 音乐播放 事件
+   */
+  onMusicTap: function (event) {
+    var isPlayingMusic = this.data.isPlayingMusic;
+    var musicData = this.data.readInfo.music;
+    var playerImg = this.data.playerImg;
+    if (isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+    } else {
+      wx.playBackgroundAudio({
+        dataUrl: musicData.url,
+        title: musicData.title,
+        coverImgUrl: musicData.coverImg,
+      })
+    }
+    //音乐播放标志位 置反
+    this.setData({
+      isPlayingMusic: !isPlayingMusic,
+    })
+    var that = this;
+    wx.onBackgroundAudioPlay(function(){
+      that.setData({
+        isPlayingMusic: true,
+      })
+    })
+    wx.onBackgroundAudioPause(function(){
+      that.setData({
+        isPlayingMusic: false,
+      })
+    })
+
   },
   /**
    * 收藏按钮的事件触发

@@ -1,8 +1,8 @@
 <!--pages/posts/post-detail.wxml-->
 <!-- 先静后动，先样式再数据 -->
 <view class='container'>
-  <image class='head-img' src='{{readInfo.post_img}}'> </image>
-  <image class='audio' src='/images/music/music-start.png'></image>
+  <image class='head-img' src='{{isPlayingMusic?readInfo.music.coverImg:readInfo.post_img}}'> </image>
+  <image class='audio' catchtap='onMusicTap' src="{{isPlayingMusic?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
   <view class='author-data'>
     <image class='img-avatar' src='{{readInfo.author_img}}'></image>
     <text class='txt-avatar'>{{readInfo.author}}</text>
