@@ -1,5 +1,6 @@
 // pages/posts/post-detail.js
 var postsData_js = require('../../../data/posts-data.js')
+var app = getApp();
 Page({
 
   /**
@@ -23,7 +24,6 @@ Page({
       readInfo: postData,
       currentId: postId
     });
-
     //进行文章收藏的初始化显示
     var collectedInfo = wx.getStorageSync('collectedInfo');
     if (collectedInfo) {
@@ -36,6 +36,30 @@ Page({
       postCollected[postId] = false;
       wx.setStorageSync('collectedInfo', postCollected);
     }
+    if (app.globalData.g_isPlayingMusic && app.globalData.g_currentMusicPostId === postId) {
+      this.setData({
+        isPlayingMusic: true,
+      })
+    }
+    this.setMusicMonitor();
+  },
+  //音乐播放监听函数
+  setMusicMonitor: function () {
+    var that = this;
+    wx.onBackgroundAudioPlay(function () {
+      that.setData({
+        isPlayingMusic: true,
+      })
+      app.globalData.g_isPlayingMusic = true;
+      app.globalData.g_currentMusicPostId = that.data.currentId;
+    });
+    wx.onBackgroundAudioPause(function () {
+      that.setData({
+        isPlayingMusic: false,
+      })
+      app.globalData.g_isPlayingMusic = false;
+      app.globalData.g_currentMusicPostId = null;
+    })
   },
   /**
    * 音乐播放 事件
@@ -52,24 +76,14 @@ Page({
         title: musicData.title,
         coverImgUrl: musicData.coverImg,
       })
-    }
+    };
+
     //音乐播放标志位 置反
     this.setData({
       isPlayingMusic: !isPlayingMusic,
     })
-    var that = this;
-    wx.onBackgroundAudioPlay(function () {
-      that.setData({
-        isPlayingMusic: true,
-      })
-    })
-    wx.onBackgroundAudioPause(function () {
-      that.setData({
-        isPlayingMusic: false,
-      })
-    })
-
   },
+
   /**
    * 收藏按钮的事件触发
    */
