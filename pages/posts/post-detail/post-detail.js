@@ -58,12 +58,12 @@ Page({
       isPlayingMusic: !isPlayingMusic,
     })
     var that = this;
-    wx.onBackgroundAudioPlay(function(){
+    wx.onBackgroundAudioPlay(function () {
       that.setData({
         isPlayingMusic: true,
       })
     })
-    wx.onBackgroundAudioPause(function(){
+    wx.onBackgroundAudioPause(function () {
       that.setData({
         isPlayingMusic: false,
       })
