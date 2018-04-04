@@ -11,7 +11,7 @@
     <view class='post-like'>
       <image class='icon' src='/images/icon/view.png'></image>
       <text class='num'>{{collect_num}}</text>
-      <image class='icon' src='/images/icon/chat.png'></image>
+      <image class='icon'  src='/images/icon/chat.png'></image>
       <text class='num'>{{view_num}}</text>
     </view>
   </view>
