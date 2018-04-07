@@ -2,9 +2,9 @@
 <!-- 引用模板文件 相对路径、绝对路径都可以 -->
 <import src="post-item/post-item-template.wxml" />
 <view>
-  <swiper class='swiper-top ' vertical='{{false}}' indicator-dots='true' autoplay='true' duration='800' interval='2000'>
+  <swiper class='swiper-top ' vertical='{{false}}' indicator-dots='true' autoplay='true' duration='800' interval='2000' catchtap='onSwiperTap'>
     <swiper-item wx:for='{{swiperImg}}' wx:key='swiperImg'>
-      <image src='{{item.img}}'></image>
+      <image src='{{item.img}}' data-post-id='{{item.postId}}' ></image>
     </swiper-item>
   </swiper>
 

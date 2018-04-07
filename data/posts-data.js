@@ -76,11 +76,15 @@ var local_objData = [
 ];
 
 var swiperImg = [
-  { img: "http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg" },
+  { img: "http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg",
+  postId:0 },
   { img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/rh9U-fyskeue1020373.jpg" },
-  { img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg" },
-  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/78/w1000h678/20180321/2r4O-fyskeue1110306.jpg" },
-  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/67/w1000h667/20180321/X3_M-fyskeue1111130.jpg" },
+  { img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg",
+    postId: 1 },
+  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/78/w1000h678/20180321/2r4O-fyskeue1110306.jpg",
+    postId: 2 },
+  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/67/w1000h667/20180321/X3_M-fyskeue1111130.jpg",
+    postId: 3 },
 ]
 
 module.exports = {
