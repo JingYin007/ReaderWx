@@ -1,0 +1,8 @@
+<import  src="/pages/template/movie/star.wxml"/>
+<template name="movieTemplate">
+  <view>
+    <image src='/images/post/vr.png'></image>
+    <text>你的名字</text>
+     <template is='starsTemplate' data='{{...item}}' />
+  </view>
+</template>

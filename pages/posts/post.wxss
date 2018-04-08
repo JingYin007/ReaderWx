@@ -1,6 +1,6 @@
 /* pages/posts/post.wxss */
-/*@import '/pages/posts/post-item/post-item-template.wxss'; */
-@import 'post-item/post-item-template.wxss';
+/*@import '/pages/template/post-item-template.wxss'; */
+@import '../template/post/item.wxss';
 page {
   background-color: #333;
 }
