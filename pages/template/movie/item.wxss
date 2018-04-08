@@ -1,0 +1,17 @@
+@import '/pages/template/movie/star.wxss';
+.movie-container{
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+}
+.movie-container .movie-img{
+  width: 228rpx;
+  height: 300rpx;
+  margin: 10rpx 0 20rpx 0;
+}
+.movie-title{
+  font-size: 32rpx;
+  color: brown;
+  font-weight: 600;
+  font-family:  cursive;
+}

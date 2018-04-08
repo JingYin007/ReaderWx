@@ -1,0 +1,22 @@
+.stars-container{
+  display: flex;
+  flex-direction: row;
+}
+.stars-container .stars{
+  display: flex;
+  flex-direction: row;
+  height: 20rpx;
+  margin-right: 24rpx;
+  margin-top: 12rpx;
+}
+.stars image{
+  padding-left: 5rpx;
+  width: 20rpx;
+  height: 20rpx;
+}
+.star-socre{
+  color: darkolivegreen;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-top: 5rpx;
+}

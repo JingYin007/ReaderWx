@@ -1,4 +1,35 @@
-.movie-list .arrow{
-  width: 20rpx;
-  height: 20rpx;
+@import '/pages/template/movie/item.wxss';
+.list-container{
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.movie-head{
+  /* display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 33rpx;
+  vertical-align: middle; */
+  padding: 30rpx 20rpx 22rpx;
+}
+.movie-item{
+  display: flex;
+  flex-direction: row;
+}
+.more{
+  float: right;
+}
+.more-img{
+  width: 12rpx;
+  height: 23rpx;
+  vertical-align: middle;
+}
+.slogan {
+  vertical-align: middle;
+  font-size: 24rpx;
+}
+.more-txt {
+  vertical-align: middle;
+  margin-right: 10rpx;
+  color: #1f4ba5;
 }
