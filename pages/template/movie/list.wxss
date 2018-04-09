@@ -3,7 +3,9 @@
   margin-top: 20rpx;
   margin-bottom: 10rpx;
 }
-
+.inner-container{
+  margin: 0 auto 20rpx;
+}
 .movie-head{
   /* display: flex;
   flex-direction: row;
@@ -20,8 +22,8 @@
   float: right;
 }
 .more-img{
-  width: 12rpx;
-  height: 23rpx;
+  width: 9rpx;
+  height: 16rpx;
   vertical-align: middle;
 }
 .slogan {
