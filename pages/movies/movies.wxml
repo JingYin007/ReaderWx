@@ -1,6 +1,6 @@
 <!--pages/movies/movies.wxml-->
 <import src="/pages/template/movie/list.wxml" />
-<view class='movie-container'>
+<view class='container'>
   <template is="movieListTemplate" />
   <template is="movieListTemplate" />
   <template is="movieListTemplate" />

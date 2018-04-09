@@ -1,19 +1,13 @@
 @import '/pages/template/movie/star.wxss';
 .movie-container{
   display: flex;
-  flex-direction: row;
-  padding: 0 20rpx;
+  flex-direction: column;
+  padding: 0 12rpx;
 }
-.movie-container .movie-img{
-<<<<<<< HEAD
-  width: 200rpx;
+.movie-img{
+  width: 212rpx;
   height: 280rpx;
   padding-bottom:20rpx;
-=======
-  width: 210rpx;
-  height: 300rpx;
-  margin: 10rpx 0 20rpx 0;
->>>>>>> 95c1bfecd49faddd40adb543695b358303068197
 }
 .movie-title{
   font-size: 32rpx;

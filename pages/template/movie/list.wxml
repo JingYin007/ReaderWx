@@ -1,6 +1,6 @@
 <import src="/pages/template/movie/item.wxml" />
 <template name="movieListTemplate">
-  <view class='list-container'>
+  <view class='movie-list-container'>
     <view class='inner-container'>
       <view class='movie-head'>
         <text class='slogan'>正在热映</text>
@@ -9,7 +9,7 @@
           <image class='more-img' src='/images/icon/arrow-right.png'></image>
         </view>
       </view>
-      <view class='movie-item'>
+      <view class='movies-container'>
         <template is="movieTemplate" />
         <template is="movieTemplate" />
         <template is="movieTemplate" />

@@ -1,6 +1,5 @@
 /* pages/movies/movies.wxss */
 @import '/pages/template/movie/list.wxss';
-.movie-container{
-  display: flex;
-  flex-direction: column;
+.container{
+ background-color:#f2f2f2;
 }
