@@ -2,7 +2,7 @@
 <template name="movieTemplate">
   <view class='movie-container'>
     <image class='movie-img' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523277201677&di=e3eb5ff2912af23913e64d63cfe6e3b9&imgtype=0&src=http%3A%2F%2F2018.qqniai.com%2Fqq%2Fuploadfile%2F20161202223501212.jpg'></image>
-    <text class='movie-title'>你的名字</text>
+    <text class='movie-title'>{{title}}</text>
     <template is='starsTemplate' data='{{...item}}' />
   </view>
 </template>

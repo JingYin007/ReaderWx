@@ -5,7 +5,7 @@
   padding: 0 12rpx;
 }
 .movie-img{
-  width: 212rpx;
+  width: 222rpx;
   height: 280rpx;
   padding-bottom:20rpx;
 }

@@ -10,7 +10,9 @@
         </view>
       </view>
       <view class='movies-container'>
-        <template is="movieTemplate" />
+        <block wx:for="{{movies}}" wx:for-item="movie" wx:key="movie">
+          <template is="movieTemplate" />
+        </block>
         <template is="movieTemplate" />
         <template is="movieTemplate" />
       </view>
