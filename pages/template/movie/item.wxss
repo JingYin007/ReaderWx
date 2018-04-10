@@ -10,7 +10,7 @@
   padding-bottom:20rpx;
 }
 .movie-title{
-  font-size: 32rpx;
+  font-size: 26rpx;
   color: brown;
   font-weight: 600;
   font-family:  cursive;

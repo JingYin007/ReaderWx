@@ -5,9 +5,9 @@
     <template is="movieListTemplate" data="{{...inTheaters}}" />
   </view>
   <view class='movies-template'>
-    <template is="movieListTemplate" />
+    <template is="movieListTemplate" data="{{...comingSoon}}" />
   </view>
   <view class='movies-template'>
-    <template is="movieListTemplate" />
+   <template is="movieListTemplate" data="{{...top250}}" />
   </view>
 </view>
