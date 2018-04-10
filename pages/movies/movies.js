@@ -5,7 +5,6 @@ Page({
   //RESTFUL API JSON
   //SOAP XML
 
-
   /**
    * 页面的初始数据
    */
@@ -27,7 +26,12 @@ Page({
     this.getMoviesList(doubanBase, coming_soonUrl, 'comingSoon');
     this.getMoviesList(doubanBase, top250Url, 'top250');
   },
-
+  onMoreTap:function(event){
+    var category = event.currentTarget.dataset.category;
+    wx.navigateTo({
+      url: 'more-movies/more-movies?category=' + category,
+    })
+  },
   getMoviesList: function (doubanBase, in_theatersUrl, dataTag) {
     var that = this;
     wx.request({
@@ -71,7 +75,7 @@ Page({
     }
     //TODO javaScript 动态语言赋值
     var readyData = {};
-    readyData[dataTag] = { movies: movies, slogan: slogan };
+    readyData[dataTag] = { movies: movies, slogan: slogan,dataTag:dataTag };
     this.setData(readyData)
   },
   /**
