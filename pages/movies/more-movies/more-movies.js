@@ -13,7 +13,8 @@ Page({
    */
   onLoad: function (options) {
     var category = options.category;
-    console.log(category);
+    //console.log(category);
+    
   },
 
   /**
