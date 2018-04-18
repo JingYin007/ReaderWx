@@ -13,7 +13,6 @@ Page({
    */
   onLoad: function (options) {
     var category = options.category;
-<<<<<<< HEAD
     var titleBarName = 'HAHAHHA';
     if (category == 'inTheaters'){
       titleBarName = '正在热映';
@@ -22,16 +21,10 @@ Page({
     }else{
       titleBarName = '豆瓣top250';
     }
-    
     //TODO 详情页的标题栏设置 
     wx.setNavigationBarTitle({
       title: titleBarName
     })
-    console.log(category);
-=======
-    //console.log(category);
-    
->>>>>>> b0eaa1732c562897d2ce9d29891db7e21985c3f0
   },
 
   /**
