@@ -13,6 +13,19 @@ Page({
    */
   onLoad: function (options) {
     var category = options.category;
+    var titleBarName = 'HAHAHHA';
+    if (category == 'inTheaters'){
+      titleBarName = '正在热映';
+    } else if (category == 'comingSoon'){
+      titleBarName = '即将上映';
+    }else{
+      titleBarName = '豆瓣top250';
+    }
+    
+    //TODO 详情页的标题栏设置 
+    wx.setNavigationBarTitle({
+      title: titleBarName
+    })
     console.log(category);
   },
 
