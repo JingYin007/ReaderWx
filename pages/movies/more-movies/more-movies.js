@@ -21,17 +21,19 @@ Page({
     }else{
       titleBarName = '豆瓣top250';
     }
-    //TODO 详情页的标题栏设置 
-    wx.setNavigationBarTitle({
-      title: titleBarName
+    this.setData({
+      titleBarName: titleBarName
     })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function (options) {
+    //TODO 详情页的标题栏设置 
+    wx.setNavigationBarTitle({
+      title: this.data.titleBarName
+    })
   },
 
   /**
