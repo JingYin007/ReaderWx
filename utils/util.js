@@ -1,3 +1,6 @@
+/**
+ * 电影星级转化方法
+ */
 function convertToStarsArray(stars) {
   var num = stars.toString().substring(0, 1);
   var array = [];
@@ -12,11 +15,30 @@ function convertToStarsArray(stars) {
   return array;
 }
 
+/**
+ * 封装 http 函数，默认‘GET’ 提交
+ */
+function http(toUrl, httpCallBack) {
+  wx.request({
+    url: toUrl,
+    method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+    header: {
+      "Content-Type": "application/json"
+    },
+    success: function (res) {
+     //回调处理
+      httpCallBack(res.data);
+    },
+    fail: function (error) {
+      console.log(error);
+    }
+  })
+}
 
 
 module.exports = {
   convertToStarsArray: convertToStarsArray,
-  //http: http,
+  http: http,
   //convertToCastString: convertToCastString,
   //convertToCastInfos: convertToCastInfos
 }

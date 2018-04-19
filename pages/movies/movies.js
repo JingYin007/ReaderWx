@@ -9,8 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    inTheaters: {},
-    comingSoon: {},
+    in_theaters: {},
+    coming_soon: {},
     top250: {},
   },
 
@@ -22,8 +22,8 @@ Page({
     var in_theatersUrl = doubanBase + '/v2/movie/in_theaters' + '?start=0&count=3';
     var coming_soonUrl = doubanBase + '/v2/movie/coming_soon' + '?start=0&count=3';
     var top250Url = doubanBase + '/v2/movie/top250' + '?start=0&count=3';
-    this.getMoviesList(doubanBase, in_theatersUrl, 'inTheaters');
-    this.getMoviesList(doubanBase, coming_soonUrl, 'comingSoon');
+    this.getMoviesList(doubanBase, in_theatersUrl, 'in_theaters');
+    this.getMoviesList(doubanBase, coming_soonUrl, 'coming_soon');
     this.getMoviesList(doubanBase, top250Url, 'top250');
   },
   onMoreTap:function(event){
@@ -66,9 +66,9 @@ Page({
       movies.push(temp);
     }
     var slogan = '';
-    if (dataTag == 'inTheaters'){
+    if (dataTag == 'in_theaters'){
       slogan = '正在热映';
-    } else if (dataTag == 'comingSoon'){
+    } else if (dataTag == 'coming_soon'){
       slogan = '即将上映'
     }else{
       slogan = '豆瓣Top250';
