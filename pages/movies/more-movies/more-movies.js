@@ -21,6 +21,7 @@ Page({
     var requestMoviesUrl = doubanBase + '/v2/movie/' +category+ '?start=3&count=18';
     util.http(requestMoviesUrl, this.processDoubanData);
   },
+  //进行下拉刷新数据加载
   onScrollLower: function (event) {
     var nextUrl = this.data.requestUrl +
       "?start=" + this.data.totalCount + "&count=18";
@@ -50,7 +51,7 @@ Page({
   },
   //动态设置 导航栏标题
   setNavBarTitle: function (category) {
-    var titleBarName = 'HAHAHHA';
+    var titleBarName = '更多电影';
     if (category == 'in_theaters') {
       titleBarName = '正在热映';
     } else if (category == 'coming_soon') {
