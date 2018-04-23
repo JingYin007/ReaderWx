@@ -12,7 +12,8 @@ var local_objData = [
     dateTime: '21小时前',
     detail: '在日内瓦大大小小的众多教堂之中，位于山丘之上，老城区之中的圣彼得大教堂，无疑是最为让人难以忘怀的一座。 教堂位于山丘之巅，一座绿色的钟楼矗立于教堂顶端。 这里拥有整个城区最佳的观赏视角。\n\n 昔日伟大的老城区，为于山之巅峰，还在缅怀它的沧桑历史时，依然置身于琴声悠扬的梦境。蜿蜒的小道，将一座座年代久远的古宅串联，苍翠的树木间，酒吧林立，五彩斑斓里的街区，美得妙不可言。',
     music: {
-      url: "http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38",
+      url: "http://m10.music.126.net/20180423095722/1afc4e8137fd4075370724f00288ea7c/ymusic/642b/89e4/67bf/4383c261c0aefb9fd9280d73741ded0e.mp3",
+      //url: "http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38",
       title: "夜夜夜夜-齐秦",
       coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000"
     }
@@ -76,15 +77,23 @@ var local_objData = [
 ];
 
 var swiperImg = [
-  { img: "http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg",
-  postId:0 },
+  {
+    img: "http://n.sinaimg.cn/news/1_img/upload/cf3881ab/30/w1000h630/20180322/AfnI-fysnevk4621990.jpg",
+    postId: 0
+  },
   { img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/rh9U-fyskeue1020373.jpg" },
-  { img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg",
-    postId: 1 },
-  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/78/w1000h678/20180321/2r4O-fyskeue1110306.jpg",
-    postId: 2 },
-  { img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/67/w1000h667/20180321/X3_M-fyskeue1111130.jpg",
-    postId: 3 },
+  {
+    img: "http://n.sinaimg.cn/news/transform/700/w1000h500/20180321/Rry8-fyskeue2659437.jpg",
+    postId: 1
+  },
+  {
+    img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/78/w1000h678/20180321/2r4O-fyskeue1110306.jpg",
+    postId: 2
+  },
+  {
+    img: "http://n.sinaimg.cn/news/1_img/upload/3ad618a7/67/w1000h667/20180321/X3_M-fyskeue1111130.jpg",
+    postId: 3
+  },
 ]
 
 module.exports = {

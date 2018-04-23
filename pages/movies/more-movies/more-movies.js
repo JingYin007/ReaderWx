@@ -16,6 +16,7 @@ Page({
   onLoad: function (options) {
     var category = options.category;
     this.setNavBarTitle(category);
+    console.log(category);
     var doubanBase = app.globalData.doubanBase;
     var requestMoviesUrl = doubanBase + '/v2/movie/' +category+ '?start=3&count=18';
     util.http(requestMoviesUrl, this.processDoubanData);
