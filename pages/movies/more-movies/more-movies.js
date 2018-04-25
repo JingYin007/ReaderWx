@@ -31,7 +31,8 @@ Page({
   onScrollLower: function (event) {
     var nextUrl = this.data.nextUrl +
       "?start=" + this.data.totalCount+"&count=20";
-    util.http(nextUrl, this.processDoubanData)
+    util.http(nextUrl, this.processDoubanData);
+    //显示 导航栏加载效果
     wx.showNavigationBarLoading()
   },
 
@@ -53,17 +54,19 @@ Page({
     }
 
     var totalMovies={};
+    //如果要绑定新加载的数据 那么需要进行数据合并操作
     if(!this.data.isEmpty){
       totalMovies = this.data.movies.concat(movies);
     }else{
       totalMovies=movies;
       this.data.isEmpty = false;
     }
-
-    this.data.totalCount +=20;
     this.setData({
       movies: totalMovies
-    })
+    });
+    this.data.totalCount += 20;
+    //隐藏 导航栏加载效果
+    wx.hideNavigationBarLoading();
   },
   //动态设置 导航栏标题
   setNavBarTitle: function (category) {
