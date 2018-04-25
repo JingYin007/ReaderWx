@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movies:{}
+    movies:{},
+    nextUrl:'',
+    totalCount:0,
+    isEmpty:true,
   },
 
   /**
@@ -18,13 +21,16 @@ Page({
     this.setNavBarTitle(category);
     console.log(category);
     var doubanBase = app.globalData.doubanBase;
-    var requestMoviesUrl = doubanBase + '/v2/movie/' +category+ '?start=3&count=18';
+    var requestMoviesUrl = doubanBase + '/v2/movie/' +category;
+    this.setData({
+      nextUrl: requestMoviesUrl,
+    })
     util.http(requestMoviesUrl, this.processDoubanData);
   },
-  //进行下拉刷新数据加载
+  //TODO 进行下拉刷新数据加载
   onScrollLower: function (event) {
-    var nextUrl = this.data.requestUrl +
-      "?start=" + this.data.totalCount + "&count=18";
+    var nextUrl = this.data.nextUrl +
+      "?start=" + this.data.totalCount+"&count=20";
     util.http(nextUrl, this.processDoubanData)
     wx.showNavigationBarLoading()
   },
@@ -45,8 +51,18 @@ Page({
       }
       movies.push(temp);
     }
+
+    var totalMovies={};
+    if(!this.data.isEmpty){
+      totalMovies = this.data.movies.concat(movies);
+    }else{
+      totalMovies=movies;
+      this.data.isEmpty = false;
+    }
+
+    this.data.totalCount +=20;
     this.setData({
-      movies:movies
+      movies: totalMovies
     })
   },
   //动态设置 导航栏标题
