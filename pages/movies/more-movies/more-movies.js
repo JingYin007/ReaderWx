@@ -7,10 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    movies:{},
-    nextUrl:'',
-    totalCount:0,
-    isEmpty:true,
+    movies: {},
+    nextUrl: '',
+    totalCount: 0,
+    isEmpty: true,
   },
 
   /**
@@ -21,30 +21,31 @@ Page({
     this.setNavBarTitle(category);
     //console.log(category);
     var doubanBase = app.globalData.doubanBase;
-    var requestMoviesUrl = doubanBase + '/v2/movie/' +category;
+    var requestMoviesUrl = doubanBase + '/v2/movie/' + category;
     this.setData({
       nextUrl: requestMoviesUrl,
     })
     util.http(requestMoviesUrl, this.processDoubanData);
-    
+    //wx.startPullDownRefresh();
   },
-  //下拉刷新 停止当前页面下拉刷新
-  onPullDownRefresh: function (event) {
-    var refreshUrl = this.data.nextUrl;
-    wx.stopPullDownRefresh()
-  },
-
 
   //TODO 进行上滑数据加载
   onScrollLower: function (event) {
     var nextUrl = this.data.nextUrl +
-      "?start=" + this.data.totalCount+"&count=20";
+      "?start=" + this.data.totalCount + "&count=20";
     util.http(nextUrl, this.processDoubanData);
     //显示 导航栏加载效果
-    wx.showNavigationBarLoading()
+    wx.showNavigationBarLoading();
   },
-
-  processDoubanData: function (moviesDouban){
+  //下拉刷新 停止当前页面下拉刷新
+  onPullDownRefresh: function (event) {
+    var refreshUrl = this.data.nextUrl + "?start=10&count=20";
+    this.data.totalCount = 0;
+    wx.showNavigationBarLoading()
+    util.http(refreshUrl, this.processDoubanData);
+    wx.startPullDownRefresh();
+  },
+  processDoubanData: function (moviesDouban) {
     var movies = [];
     for (var idx in moviesDouban.subjects) {
       var subject = moviesDouban.subjects[idx];
@@ -61,12 +62,12 @@ Page({
       movies.push(temp);
     }
 
-    var totalMovies={};
+    var totalMovies = {};
     //如果要绑定新加载的数据 那么需要进行数据合并操作
-    if(!this.data.isEmpty){
+    if (!this.data.isEmpty) {
       totalMovies = this.data.movies.concat(movies);
-    }else{
-      totalMovies=movies;
+    } else {
+      totalMovies = movies;
       this.data.isEmpty = false;
     }
     this.setData({
@@ -75,6 +76,7 @@ Page({
     this.data.totalCount += 20;
     //隐藏 导航栏加载效果
     wx.hideNavigationBarLoading();
+    wx.stopPullDownRefresh();
   },
   //动态设置 导航栏标题
   setNavBarTitle: function (category) {
