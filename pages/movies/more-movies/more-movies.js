@@ -19,15 +19,23 @@ Page({
   onLoad: function (options) {
     var category = options.category;
     this.setNavBarTitle(category);
-    console.log(category);
+    //console.log(category);
     var doubanBase = app.globalData.doubanBase;
     var requestMoviesUrl = doubanBase + '/v2/movie/' +category;
     this.setData({
       nextUrl: requestMoviesUrl,
     })
     util.http(requestMoviesUrl, this.processDoubanData);
+    
   },
-  //TODO 进行下拉刷新数据加载
+  //下拉刷新 停止当前页面下拉刷新
+  onPullDownRefresh: function (event) {
+    var refreshUrl = this.data.nextUrl;
+    wx.stopPullDownRefresh()
+  },
+
+
+  //TODO 进行上滑数据加载
   onScrollLower: function (event) {
     var nextUrl = this.data.nextUrl +
       "?start=" + this.data.totalCount+"&count=20";
