@@ -40,10 +40,12 @@ Page({
   //下拉刷新 停止当前页面下拉刷新
   onPullownRefresh: function (event) {
     var refreshUrl = this.data.nextUrl + "?start=10&count=20";
+    this.data.movies = {};
+    this.dta.isEmpty = true;
     this.data.totalCount = 0;
     wx.showNavigationBarLoading()
     util.http(refreshUrl, this.processDoubandata);
-    wx.startPullownRefresh();
+    //wx.startPullownRefresh();
   },
   processDoubandata: function (moviesDouban) {
     var movies = [];
