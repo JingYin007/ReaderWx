@@ -4,6 +4,7 @@ var app = getApp();
 Page({
 
   /**
+   * HELLO MY DEAR !
    * 页面的初始数据
    */
  data: {
