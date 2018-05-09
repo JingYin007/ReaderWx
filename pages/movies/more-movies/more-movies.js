@@ -43,7 +43,7 @@ Page({
     this.data.totalCount = 0;
     wx.showNavigationBarLoading()
     util.http(refreshUrl, this.processDoubanData);
-    wx.startPullDownRefresh();
+    //wx.startPullDownRefresh();
   },
   processDoubanData: function (moviesDouban) {
     var movies = [];
