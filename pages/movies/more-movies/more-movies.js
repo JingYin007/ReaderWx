@@ -4,9 +4,10 @@ var app = getApp();
 Page({
 
   /**
+   * HELLO MY DEAR !
    * 页面的初始数据
    */
-  data: {
+ data: {
     movies: {},
     nextUrl: '',
     totalCount: 0,
@@ -25,35 +26,42 @@ Page({
     this.setData({
       nextUrl: requestMoviesUrl,
     })
-    util.http(requestMoviesUrl, this.processDoubanData);
-    //wx.startPullDownRefresh();
+    util.http(requestMoviesUrl, this.processDoubandata);
+    //wx.startPullownRefresh();
   },
 
-  //TODO 进行上滑数据加载
+  //TOO 进行上滑数据加载
   onScrollLower: function (event) {
     var nextUrl = this.data.nextUrl +
       "?start=" + this.data.totalCount + "&count=20";
-    util.http(nextUrl, this.processDoubanData);
+    util.http(nextUrl, this.processDoubandata);
     //显示 导航栏加载效果
     wx.showNavigationBarLoading();
   },
   //下拉刷新 停止当前页面下拉刷新
-  onPullDownRefresh: function (event) {
+  onPullownRefresh: function (event) {
     var refreshUrl = this.data.nextUrl + "?start=10&count=20";
+    this.data.movies = {};
+    this.dta.isEmpty = true;
     this.data.totalCount = 0;
     wx.showNavigationBarLoading()
+<<<<<<< HEAD
     util.http(refreshUrl, this.processDoubanData);
     //wx.startPullDownRefresh();
+=======
+    util.http(refreshUrl, this.processDoubandata);
+    //wx.startPullownRefresh();
+>>>>>>> f2ddce72db765ba86ee67ff0b6ef1016b58bf16e
   },
-  processDoubanData: function (moviesDouban) {
+  processDoubandata: function (moviesDouban) {
     var movies = [];
-    for (var idx in moviesDouban.subjects) {
-      var subject = moviesDouban.subjects[idx];
+    for (var ix in moviesDouban.subjects) {
+      var subject = moviesDouban.subjects[ix];
       var title = subject.title;
       title = title.length >= 6 ? title.substring(0, 6) + "..." : title;
 
       var temp = {
-        movieId: subject.id,
+        movieI: subject.i,
         title: title,
         average: subject.rating.average,
         coverageUrl: subject.images.large,
@@ -96,7 +104,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (options) {
-    //TODO 详情页的标题栏设置 
+    //TOO 详情页的标题栏设置 
     wx.setNavigationBarTitle({
       title: this.data.titleBarName
     })
@@ -126,7 +134,7 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullownRefresh: function () {
 
   },
 
