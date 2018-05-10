@@ -45,13 +45,8 @@ Page({
     this.dta.isEmpty = true;
     this.data.totalCount = 0;
     wx.showNavigationBarLoading()
-<<<<<<< HEAD
-    util.http(refreshUrl, this.processDoubanData);
-    //wx.startPullDownRefresh();
-=======
     util.http(refreshUrl, this.processDoubandata);
     //wx.startPullownRefresh();
->>>>>>> f2ddce72db765ba86ee67ff0b6ef1016b58bf16e
   },
   processDoubandata: function (moviesDouban) {
     var movies = [];
