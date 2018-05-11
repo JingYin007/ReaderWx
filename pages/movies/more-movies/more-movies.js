@@ -4,7 +4,7 @@ var app = getApp();
 Page({
 
   /**
-   * HELLO MY DEAR !
+   * HELLO MY DEAR ! 为什么我的眼里常含泪水！！
    * 页面的初始数据
    */
  data: {
