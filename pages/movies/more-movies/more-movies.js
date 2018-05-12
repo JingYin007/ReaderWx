@@ -2,7 +2,6 @@
 var util = require('../../../utils/util.js')
 var app = getApp();
 Page({
-
   /**
    * HELLO MY DEAR ! 为什么我的眼里常含泪水！！
    * 页面的初始数据
@@ -13,9 +12,8 @@ Page({
     totalCount: 0,
     isEmpty: true,
   },
-
   /**
-   * 生命周期函数--监听页面加载
+   *  LL生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var category = options.category;
