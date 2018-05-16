@@ -26,6 +26,10 @@ Page({
     this.getMoviesList(doubanBase, coming_soonUrl, 'coming_soon');
     this.getMoviesList(doubanBase, top250Url, 'top250');
   },
+  onBindFocus:function(event){
+
+  },
+  //点击更多
   onMoreTap:function(event){
     var category = event.currentTarget.dataset.category;
     wx.navigateTo({
