@@ -29,6 +29,9 @@ Page({
     this.getMoviesList(doubanBase, coming_soonUrl, 'coming_soon');
     this.getMoviesList(doubanBase, top250Url, 'top250');
   },
+  /**
+   * 搜索导航，取消事件
+   */
   onCancelImgTap: function (event) {
     this.setData({
       containerShow: true,
@@ -37,12 +40,18 @@ Page({
     }
     )
   },
+  /**
+   * search 输入框焦点获取事件
+   */
   onBindFocus:function(event){
     this.setData({
       containerShow: false,
       searchPanelShow: true
     })
   },
+  /**
+   * 点击完成按钮时触发，event.detail = {value: value}
+   */
   onBindConfirm:function(event){
     var text = event.detail.value;
     var doubanBase = app.globalData.doubanBase;
