@@ -12,6 +12,9 @@ Page({
     in_theaters: {},
     coming_soon: {},
     top250: {},
+    searchResult: {},
+    containerShow: true,
+    searchPanelShow: false,
   },
 
   /**
@@ -26,8 +29,25 @@ Page({
     this.getMoviesList(doubanBase, coming_soonUrl, 'coming_soon');
     this.getMoviesList(doubanBase, top250Url, 'top250');
   },
+  onCancelImgTap: function (event) {
+    this.setData({
+      containerShow: true,
+      searchPanelShow: false,
+      searchResult: {}
+    }
+    )
+  },
   onBindFocus:function(event){
-
+    this.setData({
+      containerShow: false,
+      searchPanelShow: true
+    })
+  },
+  onBindConfirm:function(event){
+    var text = event.detail.value;
+    var doubanBase = app.globalData.doubanBase;
+    var searchUrl = doubanBase + "/v2/movie/search?q=" + text;
+    this.getMoviesList(doubanBase,searchUrl, "searchResult");
   },
   //点击更多
   onMoreTap:function(event){
@@ -74,8 +94,10 @@ Page({
       slogan = '正在热映';
     } else if (dataTag == 'coming_soon'){
       slogan = '即将上映'
-    }else{
+    } else if (dataTag == 'top250'){
       slogan = '豆瓣Top250';
+    }else{
+      slogan = '';
     }
     //TODO javaScript 动态语言赋值
     var readyData = {};

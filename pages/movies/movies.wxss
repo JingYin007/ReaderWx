@@ -1,5 +1,6 @@
 /* pages/movies/movies.wxss */
 @import '/pages/template/movie/list.wxss';
+@import '/pages/template/movie/grid.wxss';
 .container{
  background-color:#f2f2f2;
 }
