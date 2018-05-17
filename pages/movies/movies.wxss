@@ -18,7 +18,6 @@
 .search-img {
   margin: auto 0 auto 20rpx;
 }
-
 .search input {
   height: 100%;
   width: 600rpx;

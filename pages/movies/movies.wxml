@@ -1,4 +1,4 @@
-<!--pages/movies/movies.wxml-->
+<!-- 电影页面 pages/movies/movies.wxml-->
 <import src="/pages/template/movie/list.wxml" />
 <import src="/pages/template/movie/grid.wxml" />
 <view class="search">
