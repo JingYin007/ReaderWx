@@ -58,6 +58,15 @@ Page({
     var searchUrl = doubanBase + "/v2/movie/search?q=" + text;
     this.getMoviesList(doubanBase,searchUrl, "searchResult");
   },
+  /**
+   * 点击进入 电影详情页
+   */
+  movieDetailTap:function(event){
+    var movieId = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: 'movie-detail/detail?movieId=' + movieId,
+    })
+  },
   //点击更多
   onMoreTap:function(event){
     var category = event.currentTarget.dataset.category;

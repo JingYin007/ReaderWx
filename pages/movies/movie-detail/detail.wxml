@@ -1,0 +1,5 @@
+<!--pages/movies/movie-detail/detail.wxml-->
+
+<view>
+{{movie.movieImg}}
+</view>
