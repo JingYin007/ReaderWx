@@ -6,7 +6,7 @@ Page({
    * HELLO MY DEAR ! 为什么我的眼里常含泪水！！
    * 页面的初始数据
    */
- data: {
+  data: {
     movies: {},
     nextUrl: '',
     totalCount: 0,
@@ -27,7 +27,15 @@ Page({
     util.http(requestMoviesUrl, this.processDoubandata);
     //wx.startPullownRefresh();
   },
-
+  /**
+    * 点击进入 电影详情页
+    */
+  movieDetailTap: function (event) {
+    var movieId = event.currentTarget.dataset.postId;
+    wx.navigateTo({
+      url: '/pages/movies/movie-detail/detail?movieId=' + movieId,
+    })
+  },
   //TOO 进行上滑数据加载
   onScrollLower: function (event) {
     var nextUrl = this.data.nextUrl +
@@ -54,7 +62,7 @@ Page({
       title = title.length >= 6 ? title.substring(0, 6) + "..." : title;
 
       var temp = {
-        movieI: subject.i,
+        movieId: subject.id,
         title: title,
         average: subject.rating.average,
         coverageUrl: subject.images.large,
