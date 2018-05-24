@@ -36,6 +36,7 @@ Page({
       director.name = data.directors[0].name;
       director.id = data.directors[0].id;
     }
+    //这一部分 感觉很是啰嗦呢
     var movieDetail = {
       movieImg: data.images ? data.images.large : "",
       country: data.countries[0],
