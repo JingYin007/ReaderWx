@@ -36,8 +36,11 @@ Page({
       url: '/pages/movies/movie-detail/detail?movieId=' + movieId,
     })
   },
+  /**
+   * 页面上拉触底事件的处理函数
+   */
   //TOO 进行上滑数据加载
-  onScrollLower: function (event) {
+  onReachBottom: function (event) {
     var nextUrl = this.data.nextUrl +
       "?start=" + this.data.totalCount + "&count=20";
     util.http(nextUrl, this.processDoubandata);
@@ -45,14 +48,14 @@ Page({
     wx.showNavigationBarLoading();
   },
   //下拉刷新 停止当前页面下拉刷新
-  onPullownRefresh: function (event) {
-    var refreshUrl = this.data.nextUrl + "?start=10&count=20";
+  onPullDownRefresh: function (event) {
+    var refreshUrl = this.data.nextUrl + "?start=0&count=20";
     this.data.movies = {};
-    this.dta.isEmpty = true;
+    this.data.isEmpty = true;
     this.data.totalCount = 0;
-    wx.showNavigationBarLoading()
     util.http(refreshUrl, this.processDoubandata);
     //wx.startPullownRefresh();
+    wx.showNavigationBarLoading();
   },
   processDoubandata: function (moviesDouban) {
     var movies = [];
@@ -132,19 +135,7 @@ Page({
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullownRefresh: function () {
 
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
 
   /**
    * 用户点击右上角分享
