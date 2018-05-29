@@ -1,9 +1,7 @@
 // pages/movies/movie-detail/detail.js
-
-var util = require('../../../utils/util.js')
+import { Movie } from '../../../class/Movie.js';
 var app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -18,8 +16,15 @@ Page({
     var movieId = options.movieId;
     var movieUrl = app.globalData.doubanBase +
       "/v2/movie/subject/" + movieId;
-    //var movie = new Movie(movieUrl);
-    util.http(movieUrl, this.processDoubanData);
+    var movie = new Movie(movieUrl);
+    //util.http(movieUrl, this.processDoubanData);
+    //C#、Java、Python lambda
+    movie.getMovieData(
+      (movie) => {
+        this.setData({
+          movie: movie
+        })
+      })
   },
   /*查看图片*/
   viewMoviePostImg: function (e) {
@@ -30,7 +35,7 @@ Page({
     })
   },
   processDoubanData: function (data) {
-    console.log(data);
+    // console.log(data);
     var director = {
       avatar: "",
       name: "",
@@ -44,26 +49,11 @@ Page({
       director.name = data.directors[0].name;
       director.id = data.directors[0].id;
     }
-    //这一部分 感觉很是啰嗦呢
-    var movieDetail = {
-      movieImg: data.images ? data.images.large : "",
-      country: data.countries[0],
-      title: data.title,
-      originalTitle: data.original_title,
-      wishCount: data.wish_count,
-      commentCount: data.comments_count,
-      year: data.year,
-      generes: data.genres.join("、"),
-      stars: util.convertToStarsArray(data.rating.stars),
-      score: data.rating.average,
-      director: director,
-      casts: util.convertToCastString(data.casts),
-      castsInfo: util.convertToCastInfos(data.casts),
-      summary: data.summary
-    };
-    this.setData({
-      movie: movieDetail,
-    })
+
+    var movieDetail =
+      this.setData({
+        movie: movieDetail,
+      })
     //console.log(data);
   },
   /**
