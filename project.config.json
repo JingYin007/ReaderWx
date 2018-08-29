@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.0",
 	"appid": "wx680ed9137317644f",
-	"projectname": "Reader",
+	"projectname": "ReaderWx",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
