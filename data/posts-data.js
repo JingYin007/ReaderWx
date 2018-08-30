@@ -12,10 +12,10 @@ var local_objData = [
     dateTime: '21小时前',
     detail: '在日内瓦大大小小的众多教堂之中，位于山丘之上，老城区之中的圣彼得大教堂，无疑是最为让人难以忘怀的一座。 教堂位于山丘之巅，一座绿色的钟楼矗立于教堂顶端。 这里拥有整个城区最佳的观赏视角。\n\n 昔日伟大的老城区，为于山之巅峰，还在缅怀它的沧桑历史时，依然置身于琴声悠扬的梦境。蜿蜒的小道，将一座座年代久远的古宅串联，苍翠的树木间，酒吧林立，五彩斑斓里的街区，美得妙不可言。',
     music: {
-      url: "http://m10.music.126.net/20180423095722/1afc4e8137fd4075370724f00288ea7c/ymusic/642b/89e4/67bf/4383c261c0aefb9fd9280d73741ded0e.mp3",
+      url: "http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46",
       //url: "http://ws.stream.qqmusic.qq.com/C100003507bR0gDKBm.m4a?fromtag=38",
-      title: "夜夜夜夜-齐秦",
-      coverImg: "http://y.gtimg.cn/music/photo_new/T002R150x150M000001TEc6V0kjpVC.jpg?max_age=2592000"
+      title: "此时此刻-许巍",
+      coverImg: "http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=259200"
     }
   },
 
